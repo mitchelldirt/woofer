@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.insertUserSchema = exports.selectUserSchema = exports.users = void 0;
+exports.db = exports.insertUserSchema = exports.selectUserSchema = exports.users = void 0;
 const postgres_js_1 = require("drizzle-orm/postgres-js");
 const pg_core_1 = require("drizzle-orm/pg-core");
 const drizzle_zod_1 = require("drizzle-zod");
@@ -27,5 +27,4 @@ exports.insertUserSchema = (0, drizzle_zod_1.createInsertSchema)(exports.users, 
 });
 // for query purposes
 const queryClient = (0, postgres_1.default)('postgresql://mitchellm@localhost:5432/test');
-const db = (0, postgres_js_1.drizzle)(queryClient);
-exports.default = db;
+exports.db = (0, postgres_js_1.drizzle)(queryClient);

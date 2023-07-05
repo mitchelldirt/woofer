@@ -36,6 +36,4 @@ export type NewUser = InferModel<typeof users, 'insert'>;
 
 // for query purposes
 const queryClient = postgres('postgresql://mitchellm@localhost:5432/test');
-const db: PostgresJsDatabase = drizzle(queryClient);
-
-export default db;
+export const db: PostgresJsDatabase = drizzle(queryClient);
