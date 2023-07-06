@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
-import { db, users } from '../services/db';
-import type { User } from '../services/db';
+import { db, users } from '../services/db.js';
+import type { User } from '../services/db.js';
 
 export async function getAllUsers(req: Request, res: Response): Promise<void> {
     console.log('Is this thing on?');

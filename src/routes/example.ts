@@ -1,8 +1,8 @@
-import { postExample } from '../controllers/example';
+import { postExample } from '../controllers/example.js';
 import { Router } from 'express';
 
-const router = Router();
+const exampleRouter = Router();
 
-router.post('/example', postExample);
+exampleRouter.post('/example', postExample);
 
-export default router;
+export default exampleRouter;
