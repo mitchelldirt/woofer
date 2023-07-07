@@ -15,7 +15,7 @@ import { z } from 'zod';
 
 const genderEnum = pgEnum('gender', ['male', 'female', 'other']);
 
-export const users = pgTable('users', {
+export const users: any = pgTable('users', {
     id: uuid('id')
         .default(sql`get_random_uuid()`)
         .primaryKey(),

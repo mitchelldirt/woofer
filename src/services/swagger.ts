@@ -1,4 +1,4 @@
-import { exampleSwagger } from '../openAPI/example.js';
+import { exampleSwagger } from '../openAPI/example.ts';
 
 export const swaggerDocument = {
     openapi: '3.0.1',
