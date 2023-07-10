@@ -1,14 +1,14 @@
 import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
 import { serve, setup } from 'swagger-ui-express';
-import { swaggerDocument } from './services/swagger.ts';
-import userRouter from './routes/user.ts';
-import exampleRouter from './routes/example.ts';
+import { swaggerDocument } from './services/swagger.js';
+import userRouter from './routes/user.js';
+import exampleRouter from './routes/example.js';
 
 dotenv.config();
 
 const app: Express = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 8080;
 
 app.use(express.json());
 

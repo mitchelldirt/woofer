@@ -5,7 +5,7 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "build": "npx tsc --emitDeclarationOnly",
+        "build": "npx tsc",
         "start": "node dist/index.js",
         "dev": "concurrently \"npx tsc --emitDeclarationOnly --watch\" \"nodemon -q dist/index.js\"",
         "format:check": "prettier --check .",
